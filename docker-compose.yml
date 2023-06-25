@@ -1,0 +1,10 @@
+services:
+  ssr:
+    image: teddysun/shadowsocks-r
+    container_name: ssr
+    ports:
+      - "9000:9000"
+      - "9000:9000/udp"
+    volumes:
+      - /etc/shadowsocks-r:/etc/shadowsocks-r
+    restart: always
